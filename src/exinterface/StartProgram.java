@@ -2,17 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package inheritancepractice;
+package exinterface;
 
 /**
  *
  * @author Dan
  */
-public class InheritancePractice {
-
-    /**
-     * @param args the command line arguments
-     */
+public class StartProgram {
+    
     public static void main(String[] args) {
         // TODO code application logic here
     }
