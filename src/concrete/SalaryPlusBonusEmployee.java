@@ -68,7 +68,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
 
     @Override
     public String toString() {
-        return super.getLastName() + ", " + super.getLastName() + "\n"
+        return super.getLastName() + ", " + super.getFirstName() + "\n"
                 + "Total Sales - $" + getSales() + "\n--------------\n"
                 + "Bonus - $" + dec.format(getBonus());
     }
