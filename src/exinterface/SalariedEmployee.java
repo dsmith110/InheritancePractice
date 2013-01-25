@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package exinterface;
 
 /**
@@ -14,6 +10,9 @@ public class SalariedEmployee implements Employee {
     private String employeeNumber;
     private String department;
     private double hoursWorked;
+    private double salary;
+    private int vacationDays;
+    private int paidSickDays;
     
     @Override
     public String getFirstName() {
@@ -63,5 +62,64 @@ public class SalariedEmployee implements Employee {
     @Override
     public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
+    }
+    
+    public SalariedEmployee(double salary, String firstName, String lastName, 
+            String employeeNumber, String department, double hoursWorked) {
+        this.salary = salary;
+    }
+
+    public SalariedEmployee(String firstName, String lastName, String employeeNumber,
+            String department, double hoursWorked) {
+       
+    }
+
+    /**
+     * @return the salary
+     */
+    public double getSalary() {
+        return salary;
+    }
+
+    /**
+     * @param salary the salary to set
+     */
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    /**
+     * @return the vacationDays
+     */
+    public int getVacationDays() {
+        return vacationDays;
+    }
+
+    /**
+     * @param vacationDays the vacationDays to set
+     */
+    public void setVacationDays(int vacationDays) {
+        this.vacationDays = vacationDays;
+    }
+
+    /**
+     * @return the paidSickDays
+     */
+    public int getPaidSickDays() {
+        return paidSickDays;
+    }
+
+    /**
+     * @param paidSickDays the paidSickDays to set
+     */
+    public void setPaidSickDays(int paidSickDays) {
+        this.paidSickDays = paidSickDays;
+    }
+    
+    @Override
+    public String toString() {
+        return getLastName() + ", " + getFirstName() + "\n" +
+                "----------------------\nRemaining Sick Days - " +  getPaidSickDays() +
+                "\nRemaining Vacation Days - " + getVacationDays();
     }
 }

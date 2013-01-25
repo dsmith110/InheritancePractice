@@ -1,9 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package exinterface;
 
+import java.text.DecimalFormat;
 /**
  *
  * @author Dan
@@ -14,6 +11,9 @@ public class HourlyEmployee implements Employee {
     private String employeeNumber;
     private String department;
     private double hoursWorked;
+    private double hourlyWage;
+    DecimalFormat dec = new DecimalFormat("###.##");
+    
     
     @Override
     public String getFirstName() {
@@ -64,4 +64,41 @@ public class HourlyEmployee implements Employee {
     public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
+
+    public HourlyEmployee(double hourlyWage, String firstName, String lastName, 
+            String employeeNumber, String department, double hoursWorked) {
+        
+        this.hourlyWage = hourlyWage;
+    }
+
+    public HourlyEmployee(String firstName, String lastName, String employeeNumber,
+            String department, double hoursWorked) {
+        
+    }
+
+    /**
+     * @return the hourlyWage
+     */
+    public double getHourlyWage() {
+        return hourlyWage;
+    }
+
+    /**
+     * @param hourlyWage the hourlyWage to set
+     */
+    public void setHourlyWage(double hourlyWage) {
+        this.hourlyWage = hourlyWage;
+    }
+    
+    public double getPay() {
+        return hourlyWage * getHoursWorked();
+    }
+    
+    @Override
+    public String toString() {
+        return getLastName() + ", " + getFirstName() + "\n" +
+                "Hours Worked - " + getHoursWorked() + "\n" +
+                "Hourly Wage  - $" + getHourlyWage() + "\n" +
+                "---------------------" + "\nTotal - $" + dec.format(getPay());
+}
 }
