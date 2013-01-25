@@ -30,5 +30,4 @@ public class HourlyEmployee extends Employee {
         this.hourlyWage = hourlyWage;
     }
     
-    
 }

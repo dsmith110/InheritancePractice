@@ -74,5 +74,8 @@ public class Employee {
         this.department = department;
     }
     
-    
+    @Override
+    public String toString() {
+        return getFirstName() + " " + getLastName() + getEmployeeNumber();
+    }
 }

@@ -1,13 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package exabstract;
 
 /**
  *
- * @author Dan
+ * @author Dan Smith
  */
-public class Employee {
+public abstract class Employee {
+    private String firstName;
+    private String lastName;
+    private String employeeNumber;
+    private String department;
+    
     
 }
