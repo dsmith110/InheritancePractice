@@ -93,6 +93,7 @@ public class Employee {
     
     @Override
     public String toString() {
-        return getFirstName() + " " + getLastName() + getEmployeeNumber();
+        return getLastName() + ", " + getFirstName() + "\nEmployee Number " + 
+                getEmployeeNumber();
     }
 }

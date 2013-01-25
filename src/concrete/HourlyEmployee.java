@@ -45,6 +45,6 @@ public class HourlyEmployee extends Employee {
         return super.getLastName() + ", " + super.getFirstName() + "\n" +
                 "Hours Worked - " + super.getHoursWorked() + "\n" +
                 "Hourly Wage  - $" + getHourlyWage() + "\n" +
-                "-------------------" + "\nTotal - $" + dec.format(getPay());
+                "---------------------" + "\nTotal - $" + dec.format(getPay());
     }
 }
