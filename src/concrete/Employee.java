@@ -9,13 +9,16 @@ public class Employee {
     private String lastName;
     private String employeeNumber;
     private String department;
+    private double hoursWorked;
     
     // Constructor
-    public Employee(String firstName, String lastName, String employeeNumber, String department) {
+    public Employee(String firstName, String lastName, String employeeNumber, 
+            String department, double hoursWorked) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeNumber = employeeNumber;
         this.department = department;
+        this.hoursWorked = hoursWorked;
     }
 
     /**
@@ -72,6 +75,20 @@ public class Employee {
      */
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    /**
+     * @return the hoursWorked
+     */
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    /**
+     * @param hoursWorked the hoursWorked to set
+     */
+    public void setHoursWorked(double hoursWorked) {
+        this.hoursWorked = hoursWorked;
     }
     
     @Override

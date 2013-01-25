@@ -8,14 +8,17 @@ public class SalariedEmployee extends Employee {
     private double salary;
     private int vacationDays;
     private int paidSickDays;
+    private double sales;
 
-    public SalariedEmployee(double salary, String firstName, String lastName, String employeeNumber, String department) {
-        super(firstName, lastName, employeeNumber, department);
+    public SalariedEmployee(double salary, String firstName, String lastName, 
+            String employeeNumber, String department, double hoursWorked) {
+        super(firstName, lastName, employeeNumber, department, hoursWorked);
         this.salary = salary;
     }
 
-    public SalariedEmployee(String firstName, String lastName, String employeeNumber, String department) {
-        super(firstName, lastName, employeeNumber, department);
+    public SalariedEmployee(String firstName, String lastName, String employeeNumber,
+            String department, double hoursWorked) {
+        super(firstName, lastName, employeeNumber, department, hoursWorked);
     }
 
     /**
@@ -58,6 +61,20 @@ public class SalariedEmployee extends Employee {
      */
     public void setPaidSickDays(int paidSickDays) {
         this.paidSickDays = paidSickDays;
+    }
+
+    /**
+     * @return the sales
+     */
+    public double getSales() {
+        return sales;
+    }
+
+    /**
+     * @param sales the sales to set
+     */
+    public void setSales(double sales) {
+        this.sales = sales;
     }
     
     
