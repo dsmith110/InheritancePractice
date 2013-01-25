@@ -11,4 +11,5 @@ public abstract class Employee {
     private String department;
     
     
+    
 }

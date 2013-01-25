@@ -8,6 +8,6 @@ package exinterface;
  *
  * @author Dan
  */
-public class SalaryPlusBonusEmployee {
+public class SalaryPlusBonusEmployee extends SalariedEmployee {
     
 }
