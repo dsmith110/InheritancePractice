@@ -88,10 +88,8 @@ public abstract class Employee {
      */
     public abstract void setHoursWorked(double hoursWorked);
     
-    // Will display this info if an employee object is instantiated
-    @Override
-    public String toString() {
-        return getLastName() + ", " + getFirstName() + "\nEmployee Number " + 
-                getEmployeeNumber();
-    }
+    /*
+     * FIXED! CANNOT instantiate an abstract class!
+     * github is awesome!
+     */
 }
