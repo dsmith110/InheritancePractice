@@ -7,11 +7,13 @@ import java.text.DecimalFormat;
  * @author Dan Smith
  */
 public class SalaryPlusBonusEmployee extends SalariedEmployee {
-
+    // Used to format currency
     DecimalFormat dec = new DecimalFormat("###.##");
+    // Fields unique to salaried employees eligible for a bonus
     private double bonus;
     private double sales;
 
+    // Constructors
     public SalaryPlusBonusEmployee(double salary, String firstName, String lastName,
             String employeeNumber, String department, double hoursWorked) {
         super(salary, firstName, lastName, employeeNumber, department, hoursWorked);
@@ -24,6 +26,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
         bonus = 0;
     }
 
+    // Getters and Setters
     /**
      * @return the bonus
      */
@@ -52,6 +55,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
         this.sales = sales;
     }
 
+    // Used to assign a bonus amount
     public void calculateBonus() {
         if (sales > 40000) {
             bonus = 10000;
@@ -66,6 +70,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
         }
     }
 
+    // Used to print info for bonuses
     @Override
     public String toString() {
         return super.getLastName() + ", " + super.getFirstName() + "\n"

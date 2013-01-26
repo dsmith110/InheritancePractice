@@ -5,6 +5,7 @@ package concrete;
  * @author Dan Smith
  */
 public class Employee {
+    // Fields for employees
     private String firstName;
     private String lastName;
     private String employeeNumber;
@@ -21,6 +22,7 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
+    // Getters and Setters
     /**
      * @return the firstName
      */
@@ -91,6 +93,7 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
     
+    // Will display this info if an employee object is instantiated
     @Override
     public String toString() {
         return getLastName() + ", " + getFirstName() + "\nEmployee Number " + 

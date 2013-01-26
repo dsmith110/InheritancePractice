@@ -5,6 +5,7 @@ package exinterface;
  * @author Dan
  */
 public class SalariedEmployee implements Employee {
+    // Fields needed from Employee interface and unique to SalariedEmployee
     private String firstName;
     private String lastName;
     private String employeeNumber;
@@ -13,7 +14,8 @@ public class SalariedEmployee implements Employee {
     private double salary;
     private int vacationDays;
     private int paidSickDays;
-
+    
+    // SalariedEmployee constructors, more can be created if needed
     public SalariedEmployee(String firstName, String lastName, String employeeNumber, String department, double hoursWorked, double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -21,10 +23,15 @@ public class SalariedEmployee implements Employee {
         this.department = department;
         this.hoursWorked = hoursWorked;
         this.salary = salary;
-//        this.vacationDays = vacationDays;
-//        this.paidSickDays = paidSickDays;
     }
     
+    public SalariedEmployee(double salary, String firstName, String lastName, 
+            String employeeNumber, String department, double hoursWorked) {
+        this.salary = salary;
+    }
+    
+    // Overidden methods needed to use the Employee interface
+    // Getters and Setters
     @Override
     public String getFirstName() {
         return firstName;
@@ -75,16 +82,7 @@ public class SalariedEmployee implements Employee {
         this.hoursWorked = hoursWorked;
     }
     
-    public SalariedEmployee(double salary, String firstName, String lastName, 
-            String employeeNumber, String department, double hoursWorked) {
-        this.salary = salary;
-    }
-
-    public SalariedEmployee(String firstName, String lastName, String employeeNumber,
-            String department, double hoursWorked) {
-       
-    }
-
+    // Getters and Setters unique to SalariedEmployee class
     /**
      * @return the salary
      */
@@ -127,6 +125,7 @@ public class SalariedEmployee implements Employee {
         this.paidSickDays = paidSickDays;
     }
     
+    // Used to display SalariedEmployee information
     @Override
     public String toString() {
         return getLastName() + ", " + getFirstName() + "\n" +
