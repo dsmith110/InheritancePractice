@@ -13,6 +13,17 @@ public class SalariedEmployee implements Employee {
     private double salary;
     private int vacationDays;
     private int paidSickDays;
+
+    public SalariedEmployee(String firstName, String lastName, String employeeNumber, String department, double hoursWorked, double salary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.employeeNumber = employeeNumber;
+        this.department = department;
+        this.hoursWorked = hoursWorked;
+        this.salary = salary;
+//        this.vacationDays = vacationDays;
+//        this.paidSickDays = paidSickDays;
+    }
     
     @Override
     public String getFirstName() {

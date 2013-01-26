@@ -13,6 +13,15 @@ public class HourlyEmployee implements Employee {
     private double hoursWorked;
     private double hourlyWage;
     DecimalFormat dec = new DecimalFormat("###.##");
+
+    public HourlyEmployee(String firstName, String lastName, String employeeNumber, String department, double hoursWorked, double hourlyWage) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.employeeNumber = employeeNumber;
+        this.department = department;
+        this.hoursWorked = hoursWorked;
+        this.hourlyWage = hourlyWage;
+    }
     
     
     @Override
